@@ -1,0 +1,329 @@
+$color-white: #FFF;
+$color-black: #1b221c;
+$color-light: #ecf2e9;
+$color-green: #6f8b6e;
+$color-blue: #1c586f;
+$radius-primary: 4px;
+$radius-secondary: 8px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+body {
+    direction: rtl;
+    color: $color-black;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #FDFDFD;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: $radius-primary;
+    border: none;
+    min-width: 150px;
+    transition: all 0.3s;
+
+    &.btn--green {
+        background-color: $color-light;
+        color: $color-black;
+
+        &:hover {
+            background-color: $color-green;
+            color: $color-white;
+            transition: all 0.3s;
+        }
+    }
+
+    &.btn--dark {
+        background-color: $color-blue;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-blue;
+            color: $color-white;
+            transition: all 0.3s;
+        }
+    }
+
+    &.btn--square {
+        width: 30px;
+        height: 30px;
+        min-width: auto;
+
+        img {
+            width: 16px;
+        }
+    }
+}
+
+.overlay {
+    background-color: #2a2a2ab8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    top: 0;
+    right: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    background-color: $color-light;
+    border-radius: $radius-secondary;
+    box-shadow: 0 1px 2px #d6dfd5;
+    margin-top: 24px;
+
+    &__avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        .header__image {
+            border-radius: 50%;
+            border: 2px solid $color-green;
+            padding: 3px;
+        }
+    }
+
+    &__image {
+        height: 45px;
+    }
+
+    &__name {
+        color: $color-black;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.task-manager {
+    &-box {
+        padding: 20px;
+        border-radius: $radius-secondary;
+        box-shadow: 0 0 3px #d6dfd5;
+        background-color: $color-white;
+
+        &__empty {
+            margin-top: 10px;
+            font-size: 18px;
+            color: $color-blue;
+            letter-spacing: 1px;
+        }
+
+        &__attendance-time {
+            height: auto;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .task-manager-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-area {
+        margin-top: 46px;
+    }
+
+    &-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-bottom: 24px;
+
+        &__text {
+            color: $color-black;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+
+    &-input {
+        position: relative;
+        margin-bottom: 16px;
+
+        &__inner {
+            min-height: 50px;
+            border: 1px solid $color-light;
+            border-radius: $radius-primary;
+            width: 100%;
+            padding: 0 40px 0 26px;
+            font-size: 16px;
+            color: $color-blue;
+
+            &::placeholder {
+                color: $color-blue;
+            }
+
+            &:focus-visible {
+                outline: -webkit-focus-ring-color auto 0;
+            }
+
+            &:focus {
+                border: 1px solid $color-blue
+            }
+        }
+
+        textarea {
+            padding: 12px 40px 0 26px;
+        }
+
+        .task-manager-icon {
+            position: absolute;
+            top: 16px;
+            right: 14px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px;
+        background-color: $color-white;
+        box-shadow: 0 0 3px #d6dfd5;
+        border-radius: $radius-primary;
+        margin-bottom: 16px;
+        transition: all 0.3s;
+        color: $color-black;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 0 3px #888787;
+            transition: all 0.3s;
+        }
+
+        &.active {
+            background-color: $color-green;
+            color: $color-white;
+
+            .btn--green {
+                &:hover {
+                    background-color: $color-white;
+                }
+            }
+        }
+
+        &__informations {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        &__actions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        &__title {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        &__date {
+            padding-left: 20px;
+            border-left: 1px solid $color-green;
+        }
+
+        &__timer {
+            padding-right: 5px;
+        }
+    }
+
+    &-history {
+        .task-manager-card {
+            height: 70px;
+        }
+    }
+
+    &-modal {
+        padding: 20px;
+        border-radius: $radius-secondary;
+        background-color: $color-light;
+        width: 500px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 999;
+
+        &__btn {
+            min-width: 20px;
+            height: 20px;
+            background-color: transparent;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            border-radius: 50%;
+            padding: 0;
+
+            &:hover {
+                background-color: $color-white;
+            }
+        }
+
+        &__content {
+            margin-top:25px;
+
+            &-item {
+                padding: 16px 2px;
+                border-bottom: 1px solid $color-white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:last-child {
+                    border: none;
+                }
+
+                &-title {
+                    font-weight: 600;
+                    color: $color-blue;
+                    min-width: 120px;
+                }
+
+                &-desc {
+                    text-align: end;
+                    color: $color-blue;
+                }
+            }
+        }
+    }
+
+}
