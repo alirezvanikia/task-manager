@@ -403,18 +403,6 @@ body {
         &-title {
             flex-wrap: wrap;
         }
-
-        &-filter {
-            margin-left: 0 !important;
-            margin-top: 10px;
-        }
-
-        &-box{
-            &__attendance-time {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
     }
 
 }

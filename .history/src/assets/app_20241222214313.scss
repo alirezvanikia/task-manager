@@ -410,10 +410,7 @@ body {
         }
 
         &-box{
-            &__attendance-time {
-                flex-direction: column;
-                gap: 20px;
-            }
+            &__attendance-time
         }
     }
 

@@ -392,29 +392,7 @@ body {
     }
 
     @media (max-width: 578px) {
-
-        &-modal {
-            width: 100%;
-            border-radius: 0;
-            height: 100vh;
-            top: 0;
-        }
-
-        &-title {
-            flex-wrap: wrap;
-        }
-
-        &-filter {
-            margin-left: 0 !important;
-            margin-top: 10px;
-        }
-
-        &-box{
-            &__attendance-time {
-                flex-direction: column;
-                gap: 20px;
-            }
-        }
+        
     }
 
 }
