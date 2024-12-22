@@ -40,30 +40,29 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-    git clone https://github.com/alirezvanikia/task-manager.git
+  git clone https://github.com/alirezvanikia/task-manager.git
 
 2. Navigate to the project directory:
-   ```bash
     cd task-manager
 
 3. Install dependencies:
-   ```bash
     npm install
 
 4. Run the development server:
-   ```bash
     npm run serve
 
 5. Open the app in your browser:
-   ```bash
     http://localhost:8080
-    
+
 ## Usage
-    Once the application is running, you can:
-    Log arrival and departure times.
-    Create and manage tasks by entering details like title, start/end times, date, difficulty, platform, and pause timer.
-    Filter completed tasks based on date using the built-in filter feature.
-    The app has a simple, intuitive user interface that requires minimal effort to get started.
+
+Once the application is running, you can::
+
+- **Log arrival and departure times**: Track the time of your arrival and departure.
+- **Create and manage tasks**: Enter task details including title, start and end times, date, difficulty, platform, and pause timer.
+- **Filter completed tasks**: Use the built-in filter feature to view completed tasks based on a specific date.
+- **User-friendly interface**: Enjoy a simple, intuitive interface that makes task management easy and efficient.
 
 ## License
-    This project is open-source and available under the MIT License.
+
+This project is open-source and available under the [MIT License](LICENSE).
